@@ -1,0 +1,574 @@
+._E_E_styles_color__border {
+	border: 1px solid #e8e8e8;
+}
+
+._E_E_styles_color__link,
+._E_E_styles_color__link:link,
+._E_E_styles_color__link:visited {
+	color: #1978c8;
+	text-decoration: none;
+}
+
+._E_E_styles_color__link:hover,
+._E_E_styles_color__link:active {
+	color: #f28a25;
+}
+
+._E_E_styles_color__link-base,
+._E_E_styles_color__link-base:link,
+._E_E_styles_color__link-base:visited,
+._E_E_styles_color__link-base:hover,
+._E_E_styles_color__link-base:active {
+	color: #333;
+	text-decoration: none;
+}
+
+._E_E_styles_color__base {
+	color: #333;
+}
+
+._E_E_styles_color__light {
+	color: #999;
+}
+
+._E_E_styles_color__white {
+	color: #fff;
+}
+
+._E_E_styles_color__name {
+	color: #7f9a44;
+}
+
+._E_E_styles_color__type {
+	color: #b77daa;
+}
+
+._E_E_styles_color__base-bg {
+	background: #fff;
+}
+._E_E_styles_color__baseBg{
+	background: #fff;	
+}
+
+._E_E_styles_color__error-bg {
+	background: #c00;
+}
+
+._E_E_styles_color__code-bg {
+	background-color: #f5f5f5;
+}
+
+._E_E_styles_color__codeBg {
+	background-color: #f5f5f5;
+}
+._E_E_styles_common__reset {
+	border-collapse: separate;
+	border-spacing: 0;
+	caption-side: top;
+	cursor: auto;
+	direction: ltr;
+	empty-cells: show;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	hyphens: none;
+	letter-spacing: normal;
+	list-style: disc outside none;
+	tab-size: 8;
+	text-align: inherit;
+	text-align-last: auto;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	widows: 2;
+	word-spacing: normal;
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+}
+
+._E_E_styles_common__font {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+._E_E_styles_common__monospace {
+	font-family: Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+._E_E_styles_tableofcontents__root {
+	/*composes: reset font from "../../styles/common.css";*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+    border-collapse: separate;
+	border-spacing: 0;
+	caption-side: top;
+	cursor: auto;
+	direction: ltr;
+	empty-cells: show;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	hyphens: none;
+	letter-spacing: normal;
+	list-style: disc outside none;
+	tab-size: 8;
+	text-align: inherit;
+	text-align-last: auto;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	widows: 2;
+	word-spacing: normal;
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+}
+
+._E_E_styles_tableofcontents__search {
+	/*composes: base base-bg border from "../../styles/colors.css";*/
+    color: #333;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+	display: block;
+	box-sizing: border-box;
+	width: 170px;
+	margin: 15px;
+	padding: 6px 12px;
+	font-size: 15px;
+	border-radius: 2px;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+._E_E_styles_tableofcontents__search:focus {
+	border-color: #1978c8;
+	outline: 0;
+}
+  ._E_E_styles_styleguide__root {
+	/*composes: base base-bg from "colors.css";*/
+    color: #333;
+    background: #fff;
+}
+
+._E_E_styles_styleguide__root._E_E_styles_styleguide__hasSidebar {
+	padding-left: 200px;
+}
+
+._E_E_styles_styleguide__content {
+	max-width: 1000px;
+	padding: 15px 30px;
+	margin: 0 auto;
+}
+
+._E_E_styles_styleguide__sidebar {
+	/*composes: code-bg border from "colors.css";*/
+	background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-width: 0 1px 0 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 200px;
+	overflow: auto;
+}
+
+._E_E_styles_styleguide__components {
+	overflow: auto; /* to prevent the pane from growing out of the screen */
+}
+
+._E_E_styles_styleguide__heading {
+	/*composes: reset font from "common.css";*/
+    border-collapse: separate;
+	border-spacing: 0;
+	caption-side: top;
+	cursor: auto;
+	direction: ltr;
+	empty-cells: show;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	hyphens: none;
+	letter-spacing: normal;
+	list-style: disc outside none;
+	tab-size: 8;
+	text-align: inherit;
+	text-align-last: auto;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	widows: 2;
+	word-spacing: normal;
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	/*composes: border from "colors.css";*/
+    border: 1px solid #e8e8e8;
+	border-width: 0 0 1px 0;
+	margin: 0;
+	font-size: 18px;
+	font-weight: normal;
+	display: block;
+	padding: 15px;
+}
+
+._E_E_styles_styleguide__footer {
+	/*composes: font from ".common.css";*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+    /*composes: light from "colors.css";*/
+    color: #999;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+	._E_E_styles_styleguide__root._E_E_styles_styleguide__hasSidebar {
+		padding-left: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	._E_E_styles_styleguide__content {
+		padding: 15px;
+		order: 2;
+	}
+	._E_E_styles_styleguide__sidebar {
+		position: static;
+		width: auto;
+		border-width: 0 0 1px 0;
+		order: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+._E_E_styles_sidebar__list {
+	margin: 15px;
+}
+
+._E_E_styles_sidebar__item {
+	margin: 0 0 7px;
+	padding: 0;
+	font-size: 15px;
+}
+
+._E_E_styles_sidebar__link {
+	/*composes: link from "../../styles/colors.css";*/
+	color: #1978c8;
+	text-decoration: none;
+}
+
+._E_E_styles_sidebar__heading {
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	:not(._E_E_styles_sidebar__isParent)._E_E_styles_sidebar__item {
+		display: inline-block;
+		margin: 0 7px 0 0;
+	}
+}
+._E_E_styles_section__root {
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+._E_E_styles_section__header {
+	/*composes: font from "../../styles/common.css";*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+._E_E_styles_section__heading {
+	margin: 0 0 6px 0;
+	font-size: 38px;
+	font-weight: bold;
+}
+/*
+.anchor {
+}*/
+._E_E_styles_reactcomponent__root {
+	margin-bottom: 50px;
+	font-size: 16px;
+}
+
+._E_E_styles_reactcomponent__header {
+	/*composes: font from "../../styles/common.css";*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	position: relative;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+._E_E_styles_reactcomponent__isolatedLink {
+	/*composes: link from "../../styles/colors.css";*/
+    color: #1978c8;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 14px;
+	opacity: 0;
+	transition: opacity ease-in-out .15s .2s;
+}
+
+._E_E_styles_reactcomponent__root:hover ._E_E_styles_reactcomponent__isolatedLink {
+	opacity: 1;
+}
+
+._E_E_styles_reactcomponent__primaryHeading {
+	position: relative;
+	margin: 0 0 6px 0;
+	font-size: 36px;
+	font-weight: normal;
+}
+
+._E_E_styles_reactcomponent__heading {
+	margin-bottom: 8px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+._E_E_styles_reactcomponent__pathLine {
+	/*composes: monospace from "../../styles/common.css";*/
+    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    /*composes: light from "../../styles/colors.css";*/
+    color: #999;
+	font-size: 14px;
+}
+
+._E_E_styles_reactcomponent__description {
+	/*composes: font from "../../styles/common.css";*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	margin-bottom: 15px;
+}
+
+._E_E_styles_reactcomponent__props {
+	/*composes: reset font from "../../styles/common.css";*/
+    border-collapse: separate;
+	border-spacing: 0;
+	caption-side: top;
+	cursor: auto;
+	direction: ltr;
+	empty-cells: show;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	hyphens: none;
+	letter-spacing: normal;
+	list-style: disc outside none;
+	tab-size: 8;
+	text-align: inherit;
+	text-align-last: auto;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	widows: 2;
+	word-spacing: normal;
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	margin-bottom: 30px;
+	font-size: 13px;
+}
+
+._E_E_styles_reactcomponent__methods {
+	/*composes: reset font from "../../styles/common.css";*/
+    border-collapse: separate;
+	border-spacing: 0;
+	caption-side: top;
+	cursor: auto;
+	direction: ltr;
+	empty-cells: show;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	hyphens: none;
+	letter-spacing: normal;
+	list-style: disc outside none;
+	tab-size: 8;
+	text-align: inherit;
+	text-align-last: auto;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	widows: 2;
+	word-spacing: normal;
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	margin-bottom: 30px;
+	font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+._E_E_styles_props__inline {
+	display: inline-block;
+}
+._E_E_styles_props__inline p:last-child {
+	margin: 0;
+}
+
+._E_E_styles_props__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+._E_E_styles_props__tableHead {
+	/*composes: border from "../../styles/colors.css";*/
+    border: 1px solid #e8e8e8;
+
+	border-width: 0 0 1px 0;
+}
+._E_E_styles_props__tableBody {
+}
+._E_E_styles_props__cell {
+	padding-right: 15px;
+	padding-top: 6px;
+	vertical-align: top;
+	font-size: 13px;
+}
+._E_E_styles_props__cellHeading {
+	padding-right: 15px;
+	padding-bottom: 6px;
+	text-align: left;
+	font-size: 13px;
+}
+._E_E_styles_props__cellDesc {
+	width: 99%;
+	padding-left: 15px;
+}
+
+._E_E_styles_props__required {
+	/*composes: light from "../../styles/colors.css";*/
+	color: #999;    
+}
+._E_E_styles_props__name {
+	/*composes: name from "../../styles/colors.css";*/
+    color: #7f9a44;
+}
+._E_E_styles_props__type {
+	/*composes: type from "../../styles/colors.css";*/
+    color: #b77daa;
+}
+._E_E_styles_props__code {
+	/*composes: reset monospace from "../../styles/common.css";*/
+    border-collapse: separate;
+	border-spacing: 0;
+	caption-side: top;
+	cursor: auto;
+	direction: ltr;
+	empty-cells: show;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	hyphens: none;
+	letter-spacing: normal;
+	list-style: disc outside none;
+	tab-size: 8;
+	text-align: inherit;
+	text-align-last: auto;
+	text-indent: 0;
+	text-shadow: none;
+	text-transform: none;
+	visibility: visible;
+	white-space: normal;
+	widows: 2;
+	word-spacing: normal;
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+	display: inline;
+	font-size: inherit;
+	color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
