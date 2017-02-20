@@ -1,17 +1,19 @@
 {
-  "name": "jsontostyleguide",
+  "name": "json-to-html",
   "version": "1.0.0",
-  "description": "a react style guide",
-  "main": "index.js",
+  "description": "convert json file to html",
+  "main": "jsonResolver.js",
   "scripts": {
-    "test": "node server.js",
-    "gp": "gulp"
+    "test": "node jsonResolver.js",
+    "build": "browserify index.js -o dist/app.js "
   },
-  "author": "junaid",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^14.1.0",
-    "browserify-css": "^0.10.0",
+    "gulp-bless": "^3.2.1",
+    "gulp-less": "^3.3.0",
+    "gulp-sourcemaps": "^2.4.1",
     "gulp-util": "^3.0.8",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"

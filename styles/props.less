@@ -1,0 +1,84 @@
+.inline {
+  display: inline-block;
+}
+.inline p:last-child {
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tableHead {
+  /*composes: border from "../../styles/colors.css";*/
+  border: 1px solid #e8e8e8;
+
+  border-width: 0 0 1px 0;
+}
+.tableBody {
+}
+.cell {
+  padding-right: 15px;
+  padding-top: 6px;
+  vertical-align: top;
+  font-size: 13px;
+}
+.cellHeading {
+  padding-right: 15px;
+  padding-bottom: 6px;
+  text-align: left;
+  font-size: 13px;
+}
+.cellDesc {
+  width: 99%;
+  padding-left: 15px;
+}
+
+.required {
+  /*composes: light from "../../styles/colors.css";*/
+  color: #999;
+}
+.props-name {
+  /*composes: name from "../../styles/colors.css";*/
+  color: #7f9a44;
+}
+.type {
+  /*composes: type from "../../styles/colors.css";*/
+  color: #b77daa;
+}
+.code {
+  /*composes: reset monospace from "../../styles/common.css";*/
+  border-collapse: separate;
+  border-spacing: 0;
+  caption-side: top;
+  cursor: auto;
+  direction: ltr;
+  empty-cells: show;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: normal;
+  hyphens: none;
+  letter-spacing: normal;
+  list-style: disc outside none;
+  tab-size: 8;
+  text-align: inherit;
+  text-align-last: auto;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  visibility: visible;
+  white-space: normal;
+  widows: 2;
+  word-spacing: normal;
+  all: initial;
+  display: block;
+  box-sizing: border-box;
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+  display: inline;
+  font-size: inherit;
+  color: inherit;
+}
