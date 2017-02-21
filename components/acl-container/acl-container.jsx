@@ -1,61 +1,61 @@
 var React=require('react'),
-    aclJson=require('../../../acl-container/acl-container.json');
-var glob = require('glob');
+    Methods=require('./methods.jsx'),
+    Props=require('./props.jsx'),
+    aclJson=require('../../../acl-container/acl-container.json'),
+    adminUserDetail=require('../../../admin-user-detail/admin-user-detail-main.json'),
+    audioPlayer=require('../../../audio-player/audio-player.json'),
+    createPage=require('../../../create-page/create-page.json'),
+    detailPage=require('../../../detail-page/detail-page.json'),
+    dateTimepickerJson=require('../../../datetimepicker/datetimepicker.json');
 
-var jsons=[];
-
-glob(['../docs/**/*.json','!node_modules'], {sync:true},function(err,files){
-   if(err){
-     return;
-   }
-  files.forEach(function(file) {
-    console.log(file);
-    jsons.push(file);
-  });
-
-});
+// var glob=require('glob');
+//
+// function readJsonData(){
+//   var arrayJsonFiles=[];
+//   glob('../../**/*.json', {sync:true},function(err,files){
+//     if(err){
+//       console.log(err);
+//       return;
+//     }
+//     files.forEach(function(file) {
+//       if(!file.match("/node_modules/")){
+//         arrayJsonFiles.push(file);
+//       }
+//     });
+//     return arrayJsonFiles;
+//   });
+//
+// }
 
 
 module.exports=React.createClass({
 
   getInitialState: function() {
     return {
+      allJsonArray:[aclJson,dateTimepickerJson,adminUserDetail,audioPlayer,createPage,detailPage],
       displayName:aclJson.displayName,
       description:aclJson.description,
       methods:aclJson.methods
     }
   },
-  render: function(){
-    var data=this.state;
-    return (
 
+  render: function(){
+    var data=this.state.allJsonArray[1];
+    var list=this.state.allJsonArray;
+    return (
             <div className="reactcomponent-root">
-                    <header className="reactcomponent-header font">
-                        <h2 className="primaryHeading">{data.displayName}</h2>
-                        <div className="pathLine monospace light">
-                            {data.description}
-                        </div>
-                        <div className="props reset font">
-                            <table className="table">
-                                    <thead className="tableHead border">
-                                        <tr>
-                                            <th className="cellHeading">Method</th>
-                                            <th className="cellHeading">Return Type</th>
-                                            <th className="cellHeading">Description</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="tableBody">
-                                        {data.methods.map(function(method){
-                                        return <tr>
-                                                <td className="cell"><span className="name props-name"><code className="code  monospace">{method.name}</code></span></td>
-                                                <td className="cell"><span className="name"><code className="reset monospace">{method.returns.type.name}</code></span></td>
-                                                <td className="cell"><span className="name"><code className="reset monospace">{method.returns.type.name}</code></span></td>
-                                              </tr>;
-                                        })}
-                                    </tbody>
-                            </  table>
-                        </div>
-                    </header>
+              {list.map(function(item){
+                return <div>
+                        <header className="reactcomponent-header font">
+                            <h2 className="primaryHeading">{item.displayName}</h2>
+                            <div className="pathLine monospace light">
+                                {item.description}
+                            </div>
+                        </header>
+                       <Methods methods={item.methods}></Methods>
+                       { typeof  item.props !='undefined' ? <Props componentProps={item.props}></Props>:""}
+                      </div> ;
+              })}
             </div>
     );
   }

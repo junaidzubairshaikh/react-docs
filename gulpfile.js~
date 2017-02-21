@@ -27,21 +27,20 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('list',function(){
-  glob('../**/*.json', {sync:true},function(err,files){
+  console.log('what is it');
+  glob(['../../docs/**/*.json','!{node_modues}'], {sync:true},function(err,files){
     if(err){
       console.log(err);
       return;
     }
     files.forEach(function(file) {
-      // console.log(file);
-      if(!file.match("/node_modules/")){
-        gulpUtil.log(file);
-        jsons.push(file);
-      }
-
+      console.log(file);
+      gulpUtil.log(file);
+      jsons.push(file);
     });
     console.log(jsons.length);
   });
+
 });
 
 gulp.task('less',function(){
@@ -54,7 +53,7 @@ gulp.task('less',function(){
 });
 
 gulp.task('watch', function() {
-  gulp.watch('components/**/*.jsx', ['browserify']);
+  gulp.watch('components/*.jsx', ['browserify']);
   gulp.watch('styles/*.less', ['less']);
 
 });
