@@ -1,3 +1,4 @@
+var fs=require('fs');
 var gulp = require('gulp');
 var less= require('gulp-less');
 var bless = require('gulp-bless');
@@ -7,7 +8,20 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var reactify = require('reactify');
 var glob=require('glob');
-var jsons=[];
+var livereload=require('gulp-livereload');
+var jsons={files:[]};
+var Router=require('react-router');
+var allJsonArray=require('./index.json');
+
+gulp.task('child',function(){
+  var childRoutes=[];
+  for(var i=0; i<allJsonArray.files.length; i++){
+    var obj={path: allJsonArray.files[i].displayName, data:allJsonArray.files[i]};
+    childRoutes.push(obj)
+  }
+  console.log(childRoutes);
+  return childRoutes;
+});
 
 gulp.task('browserify', function() {
   var b = browserify({
@@ -16,17 +30,15 @@ gulp.task('browserify', function() {
   });
   b.transform(reactify); // use the reactify transform
 
-  // return b.plugin(require('css-modulesify'), {
-  //   o: 'dist/main.css'
-  //   // use: postCSSPlugins
-  // })
   return b.bundle()
     .on('error',gulpUtil.log)
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'))
+    .pipe(livereload());
 });
 
-gulp.task('list',function(){
+
+gulp.task('write',function(){
   glob('../**/*.json', {sync:true},function(err,files){
     if(err){
       console.log(err);
@@ -34,13 +46,16 @@ gulp.task('list',function(){
     }
     files.forEach(function(file) {
       // console.log(file);
-      if(!file.match("/node_modules/")){
-        gulpUtil.log(file);
-        jsons.push(file);
+      if(!file.match("/node_modules/") && !file.match("/package") && !file.match("/index")){
+        console.log(file);
+        jsons.files.push(require(file));
       }
-
     });
-    console.log(jsons.length);
+
+    fs.writeFile('index.json',JSON.stringify(jsons),function(err,data){
+      if(err) throw err;
+      console.log('data written to file');
+    });
   });
 });
 
@@ -51,14 +66,17 @@ gulp.task('less',function(){
       .pipe(bless())
       .pipe(sourceMap.write('./maps'))
       .pipe(gulp.dest('./dist'))
+      .pipe(livereload());
 });
 
 gulp.task('watch', function() {
-  gulp.watch('components/**/*.jsx', ['browserify']);
-  gulp.watch('styles/*.less', ['less']);
+  livereload.listen();
+  gulp.watch('components/**/*.jsx', ['browserify']).on('change',livereload.changed);
+  gulp.watch('styles/*.less', ['less']).on('change',livereload.changed);
 
 });
-gulp.task('default', ['watch','browserify','less']);
+
+gulp.task('default', ['write','browserify','less','watch']);
 
 
 

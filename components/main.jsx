@@ -1,10 +1,7 @@
 var React=require('react'),
 
-    AclContainer=React.createFactory(require('./acl-container/acl-container.jsx'));
-    // // color=require('../styles/color.css'),
-    // styleguide=require('../styles/styleguide.css'),
-    // commonCss=require('../styles/common.css'),
-    // sectionCss=require('../styles/section.css');
+    Component=React.createFactory(require('./component/component.jsx'));
+var RouteHandler=require('react-router').RouteHandler;
 
 
 module.exports=React.createClass({
@@ -21,14 +18,13 @@ module.exports=React.createClass({
                   <h1 className="section-header">Components</h1>
                 </header>
                 <div>
-                   <AclContainer></AclContainer>
+                  {this.props.children}
                 </div>
               </div>
             </div>
           </div>
-       </main>
+        </main>
        </div>
-
     );
   }
 });
