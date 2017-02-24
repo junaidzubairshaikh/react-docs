@@ -9,18 +9,16 @@ var source = require('vinyl-source-stream');
 var reactify = require('reactify');
 var glob=require('glob');
 var livereload=require('gulp-livereload');
+var nodemon=require('gulp-nodemon');
 var jsons={files:[]};
 var Router=require('react-router');
 var allJsonArray=require('./index.json');
 
-gulp.task('child',function(){
-  var childRoutes=[];
-  for(var i=0; i<allJsonArray.files.length; i++){
-    var obj={path: allJsonArray.files[i].displayName, data:allJsonArray.files[i]};
-    childRoutes.push(obj)
-  }
-  console.log(childRoutes);
-  return childRoutes;
+
+gulp.task('server', function (cb) {
+  nodemon({
+      script: 'server.js'
+  })
 });
 
 gulp.task('browserify', function() {
@@ -73,7 +71,6 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('components/**/*.jsx', ['browserify']).on('change',livereload.changed);
   gulp.watch('styles/*.less', ['less']).on('change',livereload.changed);
-
 });
 
 gulp.task('default', ['write','browserify','less','watch']);

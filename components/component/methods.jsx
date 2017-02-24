@@ -6,7 +6,7 @@ module.exports=React.createClass({
 
     return (
       <div className="props reset font">
-        <h3 className="reactcomponent-heading ">Mehtods</h3>
+        <h3 className="reactcomponent-heading ">Methods</h3>
         <table className="table">
           <thead className="tableHead border">
           <tr>

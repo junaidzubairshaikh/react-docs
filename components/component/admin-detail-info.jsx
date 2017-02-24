@@ -8,7 +8,7 @@ module.exports=React.createClass({
   render: function(){
 
     // var item=this.props.route.data;
-    var item=require('../../index.json').files[8];
+    var item=require('../../index.json').files[3];
 
     return (
       <div className="reactcomponent-root">

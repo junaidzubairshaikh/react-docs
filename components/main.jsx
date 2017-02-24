@@ -18,7 +18,7 @@ module.exports=React.createClass({
                   <h1 className="section-header">Components</h1>
                 </header>
                 <div>
-                  {this.props.children}
+                    <RouteHandler />
                 </div>
               </div>
             </div>

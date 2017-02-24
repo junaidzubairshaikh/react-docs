@@ -7,7 +7,9 @@ module.exports=React.createClass({
 
   render: function(){
 
-    var item=this.props.route.data;
+    // var item=this.props.route.data;
+    // var item=require('../../../acl-container/acl-container.json');
+    var item=require('../../index.json').files[0];
 
     return (
       <div className="reactcomponent-root">
@@ -23,7 +25,7 @@ module.exports=React.createClass({
             <br/>
             <br/>
             <br/>
-          </div> 
+          </div>
       </div>
     );
   }
